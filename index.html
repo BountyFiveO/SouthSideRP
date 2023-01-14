@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon!</title>
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-    <div class="container">
-        <div class="video">
-            <video autoplay muted loop id="myVideo">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coming Soon!</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="video">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./vid/LoadingScreen.mp4" type="video/mp4">
+                </video>
+            </div>
 
-                <source src="./vid/LoadingScreen.mp4" type="video/mp4">
-                
-            </video>
-    </div>
-
-
-<div class="fade-in">
-<h1>Coming Soon!</h1>
-<form action="https://getform.io/f/fcd772e6-f14e-4ef4-94d4-1db94eeb003f" method="POST">
-    <h2>Be notified when we go live?</h2>
-    <input class="emailInput" type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit" value="send" class="glow-on-hover">Notify Me</button>
-    <script>
-        $("#ajaxForm").submit(function(e){
-            e.preventDefault();
-            var action = $(this).attr("action");
-            $.ajax({
-            type: "POST",
-            url: action,
-            crossDomain: true,
-            data: new FormData(this),
-            dataType: "json",
-            processData: false,
-            contentType: false,
-            headers: {
-            "Accept": "application/json"
-            }
-        }).done(function() {
-            alert('The form was submitted successfully.')
-        }).fail(function() {
-            alert('An error occurred! Please try again later.')
-        });
-        });
-    
-    </script>
-    </form>
-</div>
-</div>
-</div>
-</body>
+            <div class="fade-in">
+                <h1>Coming Soon!</h1>
+                    <form action="https://getform.io/f/fcd772e6-f14e-4ef4-94d4-1db94eeb003f" method="POST">
+                        <h2>Be notified when we go live?</h2>
+                        <input class="emailInput" type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" value="send" class="glow-on-hover">Notify Me</button>
+                        <script>
+                            $("#ajaxForm").submit(function(e){
+                                e.preventDefault();
+                                var action = $(this).attr("action");
+                                $.ajax({
+                                    type: "POST",
+                                    url: action,
+                                    crossDomain: true,
+                                    data: new FormData(this),
+                                    dataType: "json",
+                                    processData: false,
+                                    contentType: false,
+                                    headers: {
+                                        "Accept": "application/json"
+                                    },
+                                    }).done(function() {
+                                        alert('The form was submitted successfully.')
+                                        }).fail(function() {
+                                            alert('An error occurred! Please try again later.')
+                                        });
+                                     });
+                        </script>
+                    </form>
+            </div>
+        </div>
+    </body>
 </html>
